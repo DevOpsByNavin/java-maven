@@ -28,7 +28,7 @@ A dead-simple Java project to test DevOps tools like Jenkins, OWASP Dependency-C
 mvn spring-boot:run
 ```
 
-App runs on `http://localhost:8080`.
+App runs on `http://localhost:6969`.
 
 ## Test
 
@@ -49,7 +49,7 @@ The jar will be in `target/`.
 Create a task:
 
 ```bash
-curl -X POST http://localhost:8080/tasks \
+curl -X POST http://localhost:6966/tasks \
   -H "Content-Type: application/json" \
   -d '{"title":"learn jenkins","done":false}'
 ```
@@ -57,19 +57,19 @@ curl -X POST http://localhost:8080/tasks \
 Get all tasks:
 
 ```bash
-curl http://localhost:8080/tasks
+curl http://localhost:6969/tasks
 ```
 
 Get one task by id:
 
 ```bash
-curl http://localhost:8080/tasks/1
+curl http://localhost:6969/tasks/1
 ```
 
 Update task id 1:
 
 ```bash
-curl -X PUT http://localhost:8080/tasks/1 \
+curl -X PUT http://localhost:6969/tasks/1 \
   -H "Content-Type: application/json" \
   -d '{"title":"learn sonarqube","done":true}'
 ```
@@ -77,7 +77,7 @@ curl -X PUT http://localhost:8080/tasks/1 \
 Delete task id 1:
 
 ```bash
-curl -X DELETE http://localhost:8080/tasks/1
+curl -X DELETE http://localhost:6969/tasks/1
 ```
 
 ## Run with Docker
@@ -91,7 +91,7 @@ docker build -t toy-tasks-api:latest .
 Run container:
 
 ```bash
-docker run --rm -p 8080:8080 toy-tasks-api:latest
+docker run --rm -p 6969:6969 toy-tasks-api:latest
 ```
 
 Or with Docker Compose:
