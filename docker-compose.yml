@@ -1,6 +1,6 @@
 services:
   toy-tasks-api:
-    build: .
+    image: toy-tasks-api:latest
     container_name: toy-tasks-api
     ports:
       - "6969:6969"
