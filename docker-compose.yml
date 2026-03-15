@@ -1,0 +1,6 @@
+services:
+  toy-tasks-api:
+    build: .
+    container_name: toy-tasks-api
+    ports:
+      - "8080:8080"
